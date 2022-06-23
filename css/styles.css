@@ -178,6 +178,18 @@ section.about-us .cards .card .text {
   width: calc(100% - 180px);
 }
 
+a.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 2;
+}
+a.whatsapp svg {
+  width: 40px;
+  height: 40px;
+  fill: #7C3E66;
+}
+
 .btn {
   display: inline-block;
 }
