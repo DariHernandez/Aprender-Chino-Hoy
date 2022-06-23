@@ -66,6 +66,25 @@ h2 {
   outline: none;
 }
 
+.paralax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 600px;
+}
+
+.btn {
+  display: inline-block;
+}
+.btn.cta {
+  font-size: 20px;
+  background-color: #7C3E66;
+  color: #F2EBE9;
+  padding: 10px 40px;
+  border-radius: 30px;
+}
+
 #header .top {
   display: flex;
   align-items: center;
@@ -113,6 +132,18 @@ h2 {
   color: rgba(36, 58, 115, 0.8);
 }
 
+a.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 2;
+}
+a.whatsapp svg {
+  width: 40px;
+  height: 40px;
+  fill: #7C3E66;
+}
+
 section.hero {
   height: 800px;
   position: relative;
@@ -134,12 +165,17 @@ section.hero::after {
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url("../imgs/hero.jpg");
+  background-attachment: inherit;
+  background-position: inherit;
+  background-repeat: inherit;
+  background-size: inherit;
 }
 section.hero h1 {
   font-size: 90px;
 }
 section.hero h2 {
   font-size: 35px;
+  padding-top: 0;
 }
 section.hero h1, section.hero h2 {
   margin: 0;
@@ -147,6 +183,10 @@ section.hero h1, section.hero h2 {
 }
 section.hero hr {
   width: 500px;
+  height: 2px;
+  background-color: #243A73;
+  border: none;
+  box-shadow: 0px 0px 8px #F2EBE9;
 }
 section.hero .btn {
   margin-top: 30px;
@@ -183,16 +223,14 @@ section.about-us .cards .card .text {
   width: calc(100% - 180px);
 }
 
-a.whatsapp {
-  position: fixed;
-  bottom: 20px;
-  left: 20px;
-  z-index: 2;
+section.banner {
+  background-image: url("../imgs/banner.jpg");
+  opacity: 0.6;
+  margin-top: 50px;
 }
-a.whatsapp svg {
-  width: 40px;
-  height: 40px;
-  fill: #7C3E66;
+
+footer {
+  background-color: #A5BECC;
 }
 
 footer section.contact form {
@@ -228,22 +266,6 @@ footer section.contact form input[type=submit] {
   width: 30%;
   margin: 0 auto;
   margin-top: 30px;
-}
-
-footer {
-  margin-top: 50px;
-  background-color: #A5BECC;
-}
-
-.btn {
-  display: inline-block;
-}
-.btn.cta {
-  font-size: 20px;
-  background-color: #7C3E66;
-  color: #F2EBE9;
-  padding: 10px 40px;
-  border-radius: 30px;
 }
 
 /*# sourceMappingURL=styles.css.map */
