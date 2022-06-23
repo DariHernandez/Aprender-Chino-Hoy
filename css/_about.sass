@@ -1,0 +1,36 @@
+section.about-us
+    h2
+        font-size: 50px
+        text-align: center
+        margin-top: 100px
+        margin-bottom: 0
+
+        span
+            text-decoration: underline
+
+    > p
+        text-align: center
+        margin-top: 10px
+
+    .cards
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        column-gap: 100px
+        row-gap: 50px
+        width: 80%
+        margin: 0 auto
+        margin-top: 50px
+
+        .card
+            display: flex
+            align-items: center
+            justify-content: space-between
+
+            .icon
+                width: 130px
+                height: 130px
+                margin-right: 20px
+                fill: $color-a
+
+            .text
+                width: calc(100% - 180px)

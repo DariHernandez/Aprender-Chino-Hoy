@@ -1,0 +1,37 @@
+section.hero
+    height: 800px
+    position: relative
+    text-align: center
+    display: flex
+    align-items: center
+    justify-content: center
+
+    &::after 
+        content: ""
+        opacity: 0.6
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
+        position: absolute
+        z-index: -1
+        background-position: center
+        background-repeat: no-repeat
+        background-size: cover
+        background-image: url("../imgs/hero.jpg")
+
+    h1
+        font-size: 90px
+
+    h2
+        font-size: 35px
+
+    h1, h2
+        margin: 0
+        text-shadow: 0px 0px 8px $color-d
+    
+    hr
+        width: 500px
+    
+    .btn
+        margin-top: 30px
