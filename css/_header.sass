@@ -1,0 +1,54 @@
+#header
+
+    position: sticky
+    top: 0
+
+    .top
+        display: flex
+        align-items: center
+        justify-content: center
+
+        .logo
+            width: 80px
+            height: 80px
+        
+        h1
+            margin-right: 30px
+        
+    nav
+
+        ul
+            display: flex
+            align-items: center
+            justify-content: center
+            
+            li
+                list-style: none
+                color: $color-c
+                transition-duration: 0.5s
+                cursor: pointer
+
+                a
+                    padding: 5px 60px
+                    font-size: 16px
+                    color: inherit
+                    display: block
+                    cursor: inherit
+                    border-right: 1px solid $color-c
+
+                &:last-child
+                    a
+                        border: none
+
+                &.active
+                    color: $color-b
+                    cursor: default
+
+                    a
+                        font-weight: bold
+
+                &:hover:not(.active)
+                    color: rgba($color-b, 0.8)
+
+main
+    height: 1000px

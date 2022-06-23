@@ -1,7 +1,7 @@
-$color_a: #FFFFFFff;
-$color_b: #A3080Aff;
-$color_c: #000649ff;
-$color_d: #000649ff;
+$color-a: #a40c0e
+$color-b: #1a1854
+$color-c: #c0c0c0
+$color-d: #f8f8f8
     
 html
     margin: 0
@@ -10,6 +10,8 @@ html
 body
     margin: 0
     padding: 0
+    background-color: $color-d
+    font-family: 'Exo 2', sans-serif
 
 .wrapper-img
     margin: 0
@@ -36,4 +38,15 @@ p
 a
     text-decoration: none
     color: $color_a
-    
+
+.regular-width
+    max-width: 1200px
+    margin: 0 auto
+
+.full-width
+    max-width: 100%
+    margin: 0 auto
+
+h1, h2, h3, h4, h5, h6, .title
+    font-family: 'Oleo Script', cursive
+    color: $color-b
