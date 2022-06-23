@@ -55,10 +55,25 @@ h1, h2, h3, h4, h5, h6, .title {
   color: #243A73;
 }
 
+h2 {
+  font-size: 50px;
+  text-align: center;
+  margin: 0;
+  padding-top: 100px;
+}
+
+*:focus {
+  outline: none;
+}
+
 #header .top {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+#header .top h2 {
+  margin: 0;
+  padding: 0;
 }
 #header .top .logo {
   width: 50px;
@@ -96,10 +111,6 @@ h1, h2, h3, h4, h5, h6, .title {
 }
 #header nav ul li:hover:not(.active) {
   color: rgba(36, 58, 115, 0.8);
-}
-
-main {
-  height: 1000px;
 }
 
 section.hero {
@@ -141,12 +152,6 @@ section.hero .btn {
   margin-top: 30px;
 }
 
-section.about-us h2 {
-  font-size: 50px;
-  text-align: center;
-  margin-top: 100px;
-  margin-bottom: 0;
-}
 section.about-us h2 span {
   text-decoration: underline;
 }
@@ -188,6 +193,46 @@ a.whatsapp svg {
   width: 40px;
   height: 40px;
   fill: #7C3E66;
+}
+
+footer section.contact form {
+  width: 80%;
+  margin: 0 auto;
+}
+footer section.contact form label {
+  margin-top: 20px;
+  font-size: 18px;
+  display: block;
+}
+footer section.contact form input, footer section.contact form select, footer section.contact form textarea {
+  display: block;
+  width: calc(100% - 65px);
+  font-size: 20px;
+  padding: 10px 30px;
+  border: none;
+  margin-top: 5px;
+  transition-duration: 0.5s;
+  border: 3px solid rgba(36, 58, 115, 0);
+}
+footer section.contact form input:focus, footer section.contact form select:focus, footer section.contact form textarea:focus {
+  border: 3px solid #243A73;
+}
+footer section.contact form select {
+  width: 100%;
+}
+footer section.contact form textarea {
+  height: 150px;
+  resize: none;
+}
+footer section.contact form input[type=submit] {
+  width: 30%;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+footer {
+  margin-top: 50px;
+  background-color: #A5BECC;
 }
 
 .btn {
