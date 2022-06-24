@@ -41,7 +41,7 @@ a {
 }
 
 .regular-width {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -89,6 +89,8 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 550px;
+  margin: 0 auto;
 }
 #header .top h2 {
   margin: 0;
@@ -97,7 +99,7 @@ h2 {
 #header .top .logo {
   width: 50px;
   height: 50px;
-  margin-left: 30px;
+  margin-right: 30px;
 }
 #header nav ul {
   display: flex;
@@ -138,10 +140,10 @@ a.whatsapp {
   left: 20px;
   z-index: 2;
 }
-a.whatsapp svg {
-  width: 40px;
-  height: 40px;
-  fill: #7C3E66;
+a.whatsapp img {
+  width: 60px;
+  height: 60px;
+  filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.5));
 }
 
 section.hero {
@@ -204,7 +206,7 @@ section.about-us .cards {
   grid-template-columns: repeat(2, 1fr);
   column-gap: 100px;
   row-gap: 50px;
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
   margin-top: 50px;
 }
@@ -234,7 +236,7 @@ footer {
 }
 
 footer section.contact form {
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
 }
 footer section.contact form label {
@@ -266,6 +268,66 @@ footer section.contact form input[type=submit] {
   width: 30%;
   margin: 0 auto;
   margin-top: 30px;
+}
+
+footer section.bottom {
+  background-color: rgba(124, 62, 102, 0.8);
+  margin-top: 50px;
+}
+footer section.bottom a {
+  display: inline-block;
+  color: #F2EBE9;
+}
+footer section.bottom a:hover {
+  opacity: 0.5;
+}
+footer section.bottom .wrapper-widgets .widgets {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+footer section.bottom .wrapper-widgets .widgets .widget {
+  color: #F2EBE9;
+}
+footer section.bottom .wrapper-widgets .widgets .widget p {
+  font-size: 14px;
+}
+footer section.bottom .wrapper-widgets .widgets .widget p {
+  margin: 0;
+  padding: 0;
+}
+footer section.bottom .wrapper-widgets .widgets .widget h3 {
+  color: rgba(242, 235, 233, 0.5);
+  font-size: 20px;
+}
+footer section.bottom .wrapper-widgets .widgets .widget svg {
+  width: 30px;
+  height: 30px;
+  fill: #F2EBE9;
+}
+footer section.bottom .wrapper-widgets .widgets .widget ul {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 0;
+}
+footer section.bottom .wrapper-widgets .widgets .widget ul li {
+  list-style: none;
+}
+footer section.bottom .wrapper-widgets .widgets .widget ul li a {
+  margin-right: 20px;
+}
+footer section.bottom small {
+  text-align: center;
+  width: 100%;
+  display: inline-block;
+  color: #F2EBE9;
+  margin-top: 20px;
+  background-color: #7C3E66;
+  padding: 10px 0;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,291 +1,315 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/styles.css" />
-    <link rel="icon" type="image/x-icon" href="./imgs/favicon.png" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,400;0,700;1,400&family=Oleo+Script:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <title>Aprender Chino Hoy</title>
-  </head>
-  <body>
-    <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
-      <symbol id="svg-love" class="svg_elem" viewBox="0 0 24 24">
-        <path d="M18 1l-6 4-6-4-6 5v7l12 10 12-10v-7z" />
-      </symbol>
-      <symbol id="svg-facebook" class="svg_elem" viewBox="0 0 24 24">
-        <path
-          d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"
-        />
-      </symbol>
-      <symbol id="svg-instagram" class="svg_elem" viewBox="0 0 24 24">
-        <path
-          d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
-        />
-      </symbol>
-      <symbol id="svg-twitter" class="svg_elem" viewBox="0 0 24 24">
-        <path
-          d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"
-        />
-      </symbol>
-      <symbol id="svg-youtube" class="svg_elem" viewBox="0 0 24 24">
-        <path
-          d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"
-        />
-      </symbol>
-      <symbol id="svg-coffee" class="svg_elem" viewBox="0 0 24 24">
-        <path
-          d="M14.911 10c-.308 3.325-1.397 5.712-2.948 8h-4.926c-1.373-2.009-2.613-4.372-2.948-8h10.822zm2.089-2h-15c0 5.716 1.826 8.996 4 12h7c2.12-2.911 4-6.333 4-12zm1.119 2c-.057.701-.141 1.367-.252 2h1.549c-.449 1.29-1.5 2.478-2.299 2.914-.358 1.038-.787 1.981-1.26 2.852 3.275-1.143 5.847-4.509 6.143-7.766h-3.881zm-1.119 12h-15v2h15v-2zm-3.06-19.614c-.416 1.702-3.07 2.477-3.983 4.614-.088-1.846 1.107-3.031 1.75-3.93 1.045-1.465-.537-2.267-1.633-1.171-.188.187-.38.435-.573.756-.193-.322-.386-.57-.573-.757-1.089-1.09-2.664-.294-1.658 1.137.635.903 1.863 2.095 1.775 3.965-.914-2.137-3.567-2.912-3.984-4.614-.355-1.445.928-2.386 2.29-2.386.793 0 1.613.32 2.15 1.045.537-.725 1.357-1.045 2.15-1.045 1.362 0 2.644.941 2.289 2.386z"
-        />
-      </symbol>
 
-      <symbol id="svg-whatsapp" class="svg_elem" viewBox="0 0 24 24">
-        <path
-          d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-5.971 18l.844-3.081c-.52-.902-.794-1.925-.794-2.973.001-3.279 2.668-5.946 5.946-5.946 1.591.001 3.084.62 4.206 1.744 1.123 1.124 1.741 2.618 1.74 4.207-.001 3.279-2.669 5.946-5.946 5.946-.995 0-1.976-.25-2.844-.724l-3.152.827zm3.298-1.903c.838.497 1.638.796 2.696.796 2.724 0 4.943-2.217 4.944-4.942.001-2.731-2.208-4.945-4.94-4.946-2.726 0-4.943 2.217-4.944 4.942 0 1.112.326 1.946.873 2.817l-.499 1.824 1.87-.491zm5.694-2.732c-.037-.062-.136-.099-.285-.174-.149-.074-.879-.434-1.015-.483-.136-.05-.235-.074-.334.074-.099.149-.384.483-.47.583-.087.099-.173.112-.322.037-.149-.074-.627-.231-1.195-.737-.442-.394-.74-.881-.827-1.029-.087-.149-.009-.229.065-.303l.223-.26.149-.248c.05-.099.025-.186-.012-.26l-.458-1.103c-.121-.29-.243-.25-.334-.255l-.286-.007c-.099 0-.26.037-.396.186s-.52.508-.52 1.24c0 .731.532 1.438.607 1.537.074.099 1.048 1.6 2.538 2.243.354.153.631.245.847.313.356.113.68.097.936.059.285-.043.879-.359 1.003-.706.123-.348.123-.645.086-.707z"
-        />
-      </symbol>
-      <symbol id="svg-certificate" class="svg_elem" viewBox="0 0 24 24">
-        <path
-          d="M14.969 13.547l.031.191c0 .193-.096.379-.264.496-.538.372-.467.278-.67.885-.084.253-.33.424-.605.424h-.002c-.664-.002-.549-.038-1.083.338-.112.08-.244.119-.376.119s-.264-.039-.376-.118c-.534-.376-.419-.34-1.083-.338h-.002c-.275 0-.521-.171-.605-.424-.203-.607-.133-.513-.669-.885-.169-.118-.265-.304-.265-.497l.031-.19c.207-.604.208-.488 0-1.094l-.031-.191c0-.193.096-.379.265-.497.536-.372.466-.277.669-.885.084-.253.33-.424.605-.424h.002c.662.002.544.041 1.083-.338.112-.08.244-.119.376-.119s.264.039.376.118c.534.376.419.34 1.083.338h.002c.275 0 .521.171.605.424.203.607.132.513.67.885.168.118.264.304.264.497l-.031.191c-.207.604-.208.488 0 1.094zm-1.469-1.198l-.465-.464-1.41 1.446-.66-.627-.465.464 1.125 1.091 1.875-1.91zm8.5-4.349v14h-20v-14h20zm2-2h-24v18h24v-18zm-5 11h-14v1h14v-1zm0 2h-14v1h14v-1zm-7-19c-.828 0-1.5.671-1.5 1.5s.672 1.5 1.5 1.5 1.5-.671 1.5-1.5-.672-1.5-1.5-1.5zm-4.74 5l2.771-1.979c-.206-.267-.36-.574-.446-.91l-4.045 2.889h1.72zm11.2 0l-4.044-2.889c-.086.336-.24.643-.446.91l2.77 1.979h1.72z"
-        />
-      </symbol>
-      <symbol id="svg-idea" class="svg_elem" viewBox="0 0 24 24">
-        <path
-          d="M6.72 20.492c1.532.956 3.342 1.508 5.28 1.508 1.934 0 3.741-.55 5.272-1.503l1.24 1.582c-1.876 1.215-4.112 1.921-6.512 1.921-2.403 0-4.642-.708-6.52-1.926l1.24-1.582zm6.405-.992l-.594.391c-.077.069-.19.109-.307.109h-.447c-.118 0-.231-.04-.308-.109l-.594-.391h2.25zm10.875-.5h-6c0-1.105.895-2 2-2h2c.53 0 1.039.211 1.414.586s.586.883.586 1.414zm-18 0h-6c0-1.105.895-2 2-2h2c.53 0 1.039.211 1.414.586s.586.883.586 1.414zm7.146-.5c.138 0 .25.112.25.25s-.112.25-.25.25h-2.279c-.138 0-.25-.112-.25-.25s.112-.25.25-.25h2.279zm.247-.5c0-2.002 1.607-2.83 1.607-4.614 0-1.86-1.501-2.886-3.001-2.886s-2.999 1.024-2.999 2.886c0 1.784 1.607 2.639 1.607 4.614h2.786zm7.607-6c1.242 0 2.25 1.008 2.25 2.25s-1.008 2.25-2.25 2.25-2.25-1.008-2.25-2.25 1.008-2.25 2.25-2.25zm-18 0c1.242 0 2.25 1.008 2.25 2.25s-1.008 2.25-2.25 2.25-2.25-1.008-2.25-2.25 1.008-2.25 2.25-2.25zm12.87 2.385l1.349.612-.413.911-1.298-.588c.15-.3.275-.608.362-.935zm-7.739 0c.087.332.208.631.36.935l-1.296.588-.414-.911 1.35-.612zm9.369-1.885v1h-1.501c.01-.335-.02-.672-.093-1h1.594zm-9.406 0c-.072.327-.102.663-.092.997v.003h-1.502v-1h1.594zm6.928-1.714l1.242-.882.579.816-1.252.888c-.146-.291-.335-.566-.569-.822zm-6.044-.001c-.23.252-.418.525-.569.823l-1.251-.888.578-.816 1.242.881zm4.435-1.046l.663-1.345.897.443-.664 1.345c-.278-.184-.58-.332-.896-.443zm-2.826-.001c-.315.11-.618.258-.897.442l-.663-1.343.897-.443.663 1.344zm-2.587-9.054v2.149c-2.938 1.285-5.141 3.942-5.798 7.158l-2.034-.003c.732-4.328 3.785-7.872 7.832-9.304zm8 0c4.047 1.432 7.1 4.976 7.832 9.304l-2.034.003c-.657-3.216-2.86-5.873-5.798-7.158v-2.149zm-3.5 8.846c-.334-.039-.654-.041-1-.001v-1.529h1v1.53zm2.5-2.53h-6c0-1.105.895-2 2-2h2c.53 0 1.039.211 1.414.586s.586.884.586 1.414zm-3-7c1.242 0 2.25 1.008 2.25 2.25s-1.008 2.25-2.25 2.25-2.25-1.008-2.25-2.25 1.008-2.25 2.25-2.25z"
-        />
-      </symbol>
-      <symbol id="svg-scholl" class="svg_elem" viewBox="0 0 24 24">
-        <path
-          d="M22.298 24h-5.469c-.182-2.287-1.893-4.311-3.43-5.941-.267-.283-.399-.611-.399-.908 0-.538.415-.979 1.105-.874.662.101 1.374.761 1.63 1.033v-5.175c0-.627.503-1.135 1.094-1.135.591 0 1.094.508 1.094 1.135v2.591c0 .454.445.513.502.059.118-.93 1.378-1.054 1.474.232.023.316.396.38.474.015.178-.837 1.367-.845 1.508.44.036.336.435.404.463.02.028-.388.155-.541.333-.541.6 0 1.262 1.17 1.262 2.557 0 2.492-1.641 2.498-1.641 6.492zm-9.798-21.586c2.933-1.617 7.169-2.282 11.5-2.414v13.644l-4.178-1.179c0-.145 0-.491-.014-.635-.14-1.419-1.295-2.698-2.979-2.73-1.729.048-2.866 1.303-2.991 2.882-.005.209-.003 2.166-.003 2.382-1.099 0-2.222.703-2.607 1.935-.21.678-.154 1.414.126 2.064.301.698.695 1.02 1.206 1.588-.636.113-1.295.032-1.893-.241-2.872-1.315-6.73-1.875-10.667-1.995v-17.715c4.331.132 8.568.797 11.5 2.414v10.586l1-.483v-10.103zm-9.5 10.317c2.086.312 4.451 1.024 6 1.673v-1.064c-1.668-.622-3.881-1.315-6-1.626v1.017zm0-2.031c2.086.312 4.451 1.023 6 1.672v-1.063c-1.668-.622-3.881-1.316-6-1.626v1.017zm0-2.031c2.086.311 4.451 1.023 6 1.673v-1.064c-1.668-.622-3.881-1.316-6-1.626v1.017zm0-2.031c2.086.311 4.451 1.023 6 1.672v-1.064c-1.668-.622-3.881-1.315-6-1.626v1.018zm18-1.018c-2.119.311-4.332 1.004-6 1.626v1.064c1.549-.649 3.914-1.361 6-1.672v-1.018zm-18-2.041c2.119.31 4.332 1.004 6 1.626v1.064c-1.549-.65-3.914-1.361-6-1.673v-1.017zm18 1.017c-2.086.312-4.451 1.023-6 1.673v-1.064c1.668-.622 3.881-1.316 6-1.626v1.017z"
-        />
-      </symbol>
-      <symbol id="svg-teacher" class="svg_elem" viewBox="0 0 24 24">
-        <path
-          d="M16 24h-6v-1c0-1.105.895-2 2-2h2c.53 0 1.039.211 1.414.586s.586.884.586 1.414v1zm8 0h-6v-1c0-1.105.895-2 2-2h2c.53 0 1.039.211 1.414.586s.586.884.586 1.414v1zm-17.241-15c.649 0 1.293-.213 1.692-.436.755-.42 2.695-1.643 3.485-2.124.216-.131.495-.083.654.113l.008.011c.165.204.146.499-.043.68-.622.597-2.443 2.328-3.37 3.213-.522.499-.822 1.183-.853 1.904-.095 2.207-.261 6.912-.331 8.833-.017.45-.387.806-.837.806h-.001c-.444 0-.786-.347-.836-.788-.111-.981-.329-3.28-.426-4.212-.04-.384-.28-.613-.585-.615-.304-.001-.523.226-.549.609-.061.921-.265 3.248-.341 4.22-.034.442-.397.786-.84.786h-.001c-.452 0-.824-.357-.842-.808-.097-2.342-.369-8.964-.369-8.964l-1.287 2.33c-.14.253-.445.364-.715.26h-.001c-.279-.108-.43-.411-.349-.698l1.244-4.393c.122-.43.515-.727.962-.727h4.531zm6.241 7c1.242 0 2.25 1.008 2.25 2.25s-1.008 2.25-2.25 2.25-2.25-1.008-2.25-2.25 1.008-2.25 2.25-2.25zm8 0c1.242 0 2.25 1.008 2.25 2.25s-1.008 2.25-2.25 2.25-2.25-1.008-2.25-2.25 1.008-2.25 2.25-2.25zm3-1h-15v-1h8v-1h3v1h3v-13h-22v7l-1 2.745v-10.745h24v15zm-6-6h-4v-1h4v1zm-12.626-5c1.241 0 2.25 1.008 2.25 2.25s-1.009 2.25-2.25 2.25c-1.242 0-2.25-1.008-2.25-2.25s1.008-2.25 2.25-2.25zm15.626 3h-7v-1h7v1zm0-2h-7v-1h7v1z"
-        />
-      </symbol>
-    </svg>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" type="image/x-icon" href="./imgs/favicon.png" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,400;0,700;1,400&family=Oleo+Script:wght@400;700&display=swap"
+    rel="stylesheet" />
+  <title>Aprender Chino Hoy</title>
+</head>
 
-    <header class="regular-width" id="header">
-      <a class="top" href=".">
-        <h2>Aprender Chino Hoy</h2>
-        <img
-          src="./imgs/logo.png"
-          alt="Logo of company Aprender Chino Hoy"
-          class="logo"
-        />
-      </a>
-      <nav>
-        <ul>
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#">Curso</a></li>
-          <li><a href="#">Contacto</a></li>
-          <li><a href="#">Blog</a></li>
-        </ul>
-      </nav>
-    </header>
+<body>
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+    <symbol id="svg-love" class="svg_elem" viewBox="0 0 24 24">
+      <path d="M18 1l-6 4-6-4-6 5v7l12 10 12-10v-7z" />
+    </symbol>
+    <symbol id="svg-facebook" class="svg_elem" viewBox="0 0 24 24">
+      <path
+        d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z" />
+    </symbol>
+    <symbol id="svg-instagram" class="svg_elem" viewBox="0 0 24 24">
+      <path
+        d="M14.667 12c0 1.473-1.194 2.667-2.667 2.667-1.473 0-2.667-1.193-2.667-2.667 0-1.473 1.194-2.667 2.667-2.667 1.473 0 2.667 1.194 2.667 2.667zm3.846-3.232c.038.843.046 1.096.046 3.232s-.008 2.389-.046 3.233c-.1 2.15-1.109 3.181-3.279 3.279-.844.038-1.097.047-3.234.047-2.136 0-2.39-.008-3.232-.046-2.174-.099-3.181-1.132-3.279-3.279-.039-.845-.048-1.098-.048-3.234s.009-2.389.047-3.232c.099-2.152 1.109-3.181 3.279-3.279.844-.039 1.097-.047 3.233-.047s2.39.008 3.233.046c2.168.099 3.18 1.128 3.28 3.28zm-2.405 3.232c0-2.269-1.84-4.108-4.108-4.108-2.269 0-4.108 1.839-4.108 4.108 0 2.269 1.84 4.108 4.108 4.108 2.269 0 4.108-1.839 4.108-4.108zm1.122-4.27c0-.53-.43-.96-.96-.96s-.96.43-.96.96.43.96.96.96c.531 0 .96-.43.96-.96zm6.77-7.73v24h-24v-24h24zm-4 12c0-2.172-.009-2.445-.048-3.298-.131-2.902-1.745-4.52-4.653-4.653-.854-.04-1.126-.049-3.299-.049s-2.444.009-3.298.048c-2.906.133-4.52 1.745-4.654 4.653-.039.854-.048 1.127-.048 3.299 0 2.173.009 2.445.048 3.298.134 2.906 1.746 4.521 4.654 4.654.854.039 1.125.048 3.298.048s2.445-.009 3.299-.048c2.902-.133 4.522-1.745 4.653-4.654.039-.853.048-1.125.048-3.298z" />
+    </symbol>
+    <symbol id="svg-twitter" class="svg_elem" viewBox="0 0 24 24">
+      <path
+        d="M0 0v24h24v-24h-24zm18.862 9.237c.208 4.617-3.235 9.765-9.33 9.765-1.854 0-3.579-.543-5.032-1.475 1.742.205 3.48-.278 4.86-1.359-1.437-.027-2.649-.976-3.066-2.28.515.098 1.021.069 1.482-.056-1.579-.317-2.668-1.739-2.633-3.26.442.246.949.394 1.486.411-1.461-.977-1.875-2.907-1.016-4.383 1.619 1.986 4.038 3.293 6.766 3.43-.479-2.053 1.079-4.03 3.198-4.03.944 0 1.797.398 2.396 1.037.748-.147 1.451-.42 2.085-.796-.245.767-.766 1.41-1.443 1.816.664-.08 1.297-.256 1.885-.517-.44.656-.997 1.234-1.638 1.697z" />
+    </symbol>
+    <symbol id="svg-whatsapp-2" class="svg_elem" viewBox="0 0 24 24">
+      <path
+        d="M12.036 5.339c-3.635 0-6.591 2.956-6.593 6.589-.001 1.483.434 2.594 1.164 3.756l-.666 2.432 2.494-.654c1.117.663 2.184 1.061 3.595 1.061 3.632 0 6.591-2.956 6.592-6.59.003-3.641-2.942-6.593-6.586-6.594zm3.876 9.423c-.165.463-.957.885-1.337.942-.341.051-.773.072-1.248-.078-.288-.091-.657-.213-1.129-.417-1.987-.858-3.285-2.859-3.384-2.991-.099-.132-.809-1.074-.809-2.049 0-.975.512-1.454.693-1.653.182-.2.396-.25.528-.25l.38.007c.122.006.285-.046.446.34.165.397.561 1.372.611 1.471.049.099.083.215.016.347-.066.132-.099.215-.198.33l-.297.347c-.099.099-.202.206-.087.404.116.198.513.847 1.102 1.372.757.675 1.395.884 1.593.983.198.099.314.083.429-.05.116-.132.495-.578.627-.777s.264-.165.446-.099 1.156.545 1.354.645c.198.099.33.149.38.231.049.085.049.482-.116.945zm-15.912-14.762v24h24v-24h-24zm12.033 19.862c-1.327 0-2.634-.333-3.792-.965l-4.203 1.103 1.125-4.108c-.694-1.202-1.059-2.566-1.058-3.964.002-4.372 3.558-7.928 7.928-7.928 2.121.001 4.112.827 5.609 2.325s2.321 3.491 2.32 5.609c-.002 4.372-3.559 7.928-7.929 7.928z" />
+    </symbol>
 
-    <a href="" class="whatsapp">
-      <svg class="">
-        <use xlink:href="#svg-whatsapp"></use>
-      </svg>
+    <symbol id="svg-whatsapp" class="svg_elem" viewBox="0 0 24 24">
+      <path
+        d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-5.971 18l.844-3.081c-.52-.902-.794-1.925-.794-2.973.001-3.279 2.668-5.946 5.946-5.946 1.591.001 3.084.62 4.206 1.744 1.123 1.124 1.741 2.618 1.74 4.207-.001 3.279-2.669 5.946-5.946 5.946-.995 0-1.976-.25-2.844-.724l-3.152.827zm3.298-1.903c.838.497 1.638.796 2.696.796 2.724 0 4.943-2.217 4.944-4.942.001-2.731-2.208-4.945-4.94-4.946-2.726 0-4.943 2.217-4.944 4.942 0 1.112.326 1.946.873 2.817l-.499 1.824 1.87-.491zm5.694-2.732c-.037-.062-.136-.099-.285-.174-.149-.074-.879-.434-1.015-.483-.136-.05-.235-.074-.334.074-.099.149-.384.483-.47.583-.087.099-.173.112-.322.037-.149-.074-.627-.231-1.195-.737-.442-.394-.74-.881-.827-1.029-.087-.149-.009-.229.065-.303l.223-.26.149-.248c.05-.099.025-.186-.012-.26l-.458-1.103c-.121-.29-.243-.25-.334-.255l-.286-.007c-.099 0-.26.037-.396.186s-.52.508-.52 1.24c0 .731.532 1.438.607 1.537.074.099 1.048 1.6 2.538 2.243.354.153.631.245.847.313.356.113.68.097.936.059.285-.043.879-.359 1.003-.706.123-.348.123-.645.086-.707z" />
+    </symbol>
+    <symbol id="svg-certificate" class="svg_elem" viewBox="0 0 24 24">
+      <path
+        d="M14.969 13.547l.031.191c0 .193-.096.379-.264.496-.538.372-.467.278-.67.885-.084.253-.33.424-.605.424h-.002c-.664-.002-.549-.038-1.083.338-.112.08-.244.119-.376.119s-.264-.039-.376-.118c-.534-.376-.419-.34-1.083-.338h-.002c-.275 0-.521-.171-.605-.424-.203-.607-.133-.513-.669-.885-.169-.118-.265-.304-.265-.497l.031-.19c.207-.604.208-.488 0-1.094l-.031-.191c0-.193.096-.379.265-.497.536-.372.466-.277.669-.885.084-.253.33-.424.605-.424h.002c.662.002.544.041 1.083-.338.112-.08.244-.119.376-.119s.264.039.376.118c.534.376.419.34 1.083.338h.002c.275 0 .521.171.605.424.203.607.132.513.67.885.168.118.264.304.264.497l-.031.191c-.207.604-.208.488 0 1.094zm-1.469-1.198l-.465-.464-1.41 1.446-.66-.627-.465.464 1.125 1.091 1.875-1.91zm8.5-4.349v14h-20v-14h20zm2-2h-24v18h24v-18zm-5 11h-14v1h14v-1zm0 2h-14v1h14v-1zm-7-19c-.828 0-1.5.671-1.5 1.5s.672 1.5 1.5 1.5 1.5-.671 1.5-1.5-.672-1.5-1.5-1.5zm-4.74 5l2.771-1.979c-.206-.267-.36-.574-.446-.91l-4.045 2.889h1.72zm11.2 0l-4.044-2.889c-.086.336-.24.643-.446.91l2.77 1.979h1.72z" />
+    </symbol>
+    <symbol id="svg-idea" class="svg_elem" viewBox="0 0 24 24">
+      <path
+        d="M6.72 20.492c1.532.956 3.342 1.508 5.28 1.508 1.934 0 3.741-.55 5.272-1.503l1.24 1.582c-1.876 1.215-4.112 1.921-6.512 1.921-2.403 0-4.642-.708-6.52-1.926l1.24-1.582zm6.405-.992l-.594.391c-.077.069-.19.109-.307.109h-.447c-.118 0-.231-.04-.308-.109l-.594-.391h2.25zm10.875-.5h-6c0-1.105.895-2 2-2h2c.53 0 1.039.211 1.414.586s.586.883.586 1.414zm-18 0h-6c0-1.105.895-2 2-2h2c.53 0 1.039.211 1.414.586s.586.883.586 1.414zm7.146-.5c.138 0 .25.112.25.25s-.112.25-.25.25h-2.279c-.138 0-.25-.112-.25-.25s.112-.25.25-.25h2.279zm.247-.5c0-2.002 1.607-2.83 1.607-4.614 0-1.86-1.501-2.886-3.001-2.886s-2.999 1.024-2.999 2.886c0 1.784 1.607 2.639 1.607 4.614h2.786zm7.607-6c1.242 0 2.25 1.008 2.25 2.25s-1.008 2.25-2.25 2.25-2.25-1.008-2.25-2.25 1.008-2.25 2.25-2.25zm-18 0c1.242 0 2.25 1.008 2.25 2.25s-1.008 2.25-2.25 2.25-2.25-1.008-2.25-2.25 1.008-2.25 2.25-2.25zm12.87 2.385l1.349.612-.413.911-1.298-.588c.15-.3.275-.608.362-.935zm-7.739 0c.087.332.208.631.36.935l-1.296.588-.414-.911 1.35-.612zm9.369-1.885v1h-1.501c.01-.335-.02-.672-.093-1h1.594zm-9.406 0c-.072.327-.102.663-.092.997v.003h-1.502v-1h1.594zm6.928-1.714l1.242-.882.579.816-1.252.888c-.146-.291-.335-.566-.569-.822zm-6.044-.001c-.23.252-.418.525-.569.823l-1.251-.888.578-.816 1.242.881zm4.435-1.046l.663-1.345.897.443-.664 1.345c-.278-.184-.58-.332-.896-.443zm-2.826-.001c-.315.11-.618.258-.897.442l-.663-1.343.897-.443.663 1.344zm-2.587-9.054v2.149c-2.938 1.285-5.141 3.942-5.798 7.158l-2.034-.003c.732-4.328 3.785-7.872 7.832-9.304zm8 0c4.047 1.432 7.1 4.976 7.832 9.304l-2.034.003c-.657-3.216-2.86-5.873-5.798-7.158v-2.149zm-3.5 8.846c-.334-.039-.654-.041-1-.001v-1.529h1v1.53zm2.5-2.53h-6c0-1.105.895-2 2-2h2c.53 0 1.039.211 1.414.586s.586.884.586 1.414zm-3-7c1.242 0 2.25 1.008 2.25 2.25s-1.008 2.25-2.25 2.25-2.25-1.008-2.25-2.25 1.008-2.25 2.25-2.25z" />
+    </symbol>
+    <symbol id="svg-scholl" class="svg_elem" viewBox="0 0 24 24">
+      <path
+        d="M22.298 24h-5.469c-.182-2.287-1.893-4.311-3.43-5.941-.267-.283-.399-.611-.399-.908 0-.538.415-.979 1.105-.874.662.101 1.374.761 1.63 1.033v-5.175c0-.627.503-1.135 1.094-1.135.591 0 1.094.508 1.094 1.135v2.591c0 .454.445.513.502.059.118-.93 1.378-1.054 1.474.232.023.316.396.38.474.015.178-.837 1.367-.845 1.508.44.036.336.435.404.463.02.028-.388.155-.541.333-.541.6 0 1.262 1.17 1.262 2.557 0 2.492-1.641 2.498-1.641 6.492zm-9.798-21.586c2.933-1.617 7.169-2.282 11.5-2.414v13.644l-4.178-1.179c0-.145 0-.491-.014-.635-.14-1.419-1.295-2.698-2.979-2.73-1.729.048-2.866 1.303-2.991 2.882-.005.209-.003 2.166-.003 2.382-1.099 0-2.222.703-2.607 1.935-.21.678-.154 1.414.126 2.064.301.698.695 1.02 1.206 1.588-.636.113-1.295.032-1.893-.241-2.872-1.315-6.73-1.875-10.667-1.995v-17.715c4.331.132 8.568.797 11.5 2.414v10.586l1-.483v-10.103zm-9.5 10.317c2.086.312 4.451 1.024 6 1.673v-1.064c-1.668-.622-3.881-1.315-6-1.626v1.017zm0-2.031c2.086.312 4.451 1.023 6 1.672v-1.063c-1.668-.622-3.881-1.316-6-1.626v1.017zm0-2.031c2.086.311 4.451 1.023 6 1.673v-1.064c-1.668-.622-3.881-1.316-6-1.626v1.017zm0-2.031c2.086.311 4.451 1.023 6 1.672v-1.064c-1.668-.622-3.881-1.315-6-1.626v1.018zm18-1.018c-2.119.311-4.332 1.004-6 1.626v1.064c1.549-.649 3.914-1.361 6-1.672v-1.018zm-18-2.041c2.119.31 4.332 1.004 6 1.626v1.064c-1.549-.65-3.914-1.361-6-1.673v-1.017zm18 1.017c-2.086.312-4.451 1.023-6 1.673v-1.064c1.668-.622 3.881-1.316 6-1.626v1.017z" />
+    </symbol>
+    <symbol id="svg-teacher" class="svg_elem" viewBox="0 0 24 24">
+      <path
+        d="M16 24h-6v-1c0-1.105.895-2 2-2h2c.53 0 1.039.211 1.414.586s.586.884.586 1.414v1zm8 0h-6v-1c0-1.105.895-2 2-2h2c.53 0 1.039.211 1.414.586s.586.884.586 1.414v1zm-17.241-15c.649 0 1.293-.213 1.692-.436.755-.42 2.695-1.643 3.485-2.124.216-.131.495-.083.654.113l.008.011c.165.204.146.499-.043.68-.622.597-2.443 2.328-3.37 3.213-.522.499-.822 1.183-.853 1.904-.095 2.207-.261 6.912-.331 8.833-.017.45-.387.806-.837.806h-.001c-.444 0-.786-.347-.836-.788-.111-.981-.329-3.28-.426-4.212-.04-.384-.28-.613-.585-.615-.304-.001-.523.226-.549.609-.061.921-.265 3.248-.341 4.22-.034.442-.397.786-.84.786h-.001c-.452 0-.824-.357-.842-.808-.097-2.342-.369-8.964-.369-8.964l-1.287 2.33c-.14.253-.445.364-.715.26h-.001c-.279-.108-.43-.411-.349-.698l1.244-4.393c.122-.43.515-.727.962-.727h4.531zm6.241 7c1.242 0 2.25 1.008 2.25 2.25s-1.008 2.25-2.25 2.25-2.25-1.008-2.25-2.25 1.008-2.25 2.25-2.25zm8 0c1.242 0 2.25 1.008 2.25 2.25s-1.008 2.25-2.25 2.25-2.25-1.008-2.25-2.25 1.008-2.25 2.25-2.25zm3-1h-15v-1h8v-1h3v1h3v-13h-22v7l-1 2.745v-10.745h24v15zm-6-6h-4v-1h4v1zm-12.626-5c1.241 0 2.25 1.008 2.25 2.25s-1.009 2.25-2.25 2.25c-1.242 0-2.25-1.008-2.25-2.25s1.008-2.25 2.25-2.25zm15.626 3h-7v-1h7v1zm0-2h-7v-1h7v1z" />
+    </symbol>
+  </svg>
+
+  <header class="regular-width" id="header">
+    <a class="top" href=".">
+      <img src="./imgs/logo.png" alt="Logo of company Aprender Chino Hoy" class="logo" />
+      <h2>Aprender Chino Hoy</h2>
     </a>
+    <nav>
+      <ul>
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Curso</a></li>
+        <li><a href="#">Contacto</a></li>
+        <li><a href="#">Blog</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <main>
-      <section class="hero full-width paralax">
-        <div class="text">
-          <h1>
-            SUMMER
-            <br />
-            INTENSIVES
-          </h1>
-          <hr />
-          <h2>JULY | AUGUST | SEPTEMBER</h2>
-          <a href="#" class="btn cta">GO!</a>
-        </div>
-      </section>
+  <a href="" class="whatsapp">
+    <img src="./imgs/whatsapp.png" alt="whatsapp logo">
+  </a>
 
-      <section class="about-us regular-width">
-        <h2>
-          ¿Por qué
-          <span>Aprender Chino Hoy</span>
-          ?
-        </h2>
-        <p>tenemos un curso perfecto para ti</p>
-        <div class="cards">
-          <div class="card">
-            <svg class="icon">
-              <use xlink:href="#svg-certificate"></use>
-            </svg>
-            <div class="text">
-              <h3>Inglés para todos los niveles, edades y objetivos</h3>
-              <p>
-                Chino para todas las edades y nivelaes. Sea cuál sea tu
-                objetivo, en Aprender Chino Hoy te ayudamos a alcanzarlo.
-              </p>
-            </div>
-          </div>
+  <main>
+    <section class="hero full-width paralax">
+      <div class="text">
+        <h1>
+          SUMMER
+          <br />
+          INTENSIVES
+        </h1>
+        <hr />
+        <h2>JULY | AUGUST | SEPTEMBER</h2>
+        <a href="#" class="btn cta">GO!</a>
+      </div>
+    </section>
 
-          <div class="card">
-            <svg class="icon">
-              <use xlink:href="#svg-idea"></use>
-            </svg>
-            <div class="text">
-              <h3>Método propio que funciona</h3>
-              <p>
-                Método propio basado en conversaciones impartido por profesores
-                de diferentes nacionalidades.
-              </p>
-            </div>
-          </div>
-
-          <div class="card">
-            <svg class="icon">
-              <use xlink:href="#svg-scholl"></use>
-            </svg>
-            <div class="text">
-              <h3>#Aprender-Chino-Hoy-Experience</h3>
-              <p>
-                Academia de chino donde no tendrás la sesnación de estar en una
-                clase. ¡Una experiencia mas allá de las aulas!
-              </p>
-            </div>
-          </div>
-
-          <div class="card">
-            <svg class="icon">
-              <use xlink:href="#svg-teacher"></use>
-            </svg>
-            <div class="text">
-              <h3>Profesorado Nativo</h3>
-              <p>
-                Profesores cualificados de diversas partes del mundo, en
-                continua formación y entrenamiento.
-              </p>
-            </div>
+    <section class="about-us regular-width">
+      <h2>
+        ¿Por qué
+        <span>Aprender Chino Hoy</span>
+        ?
+      </h2>
+      <p>tenemos un curso perfecto para ti</p>
+      <div class="cards">
+        <div class="card">
+          <svg class="icon">
+            <use xlink:href="#svg-certificate"></use>
+          </svg>
+          <div class="text">
+            <h3>Inglés para todos los niveles, edades y objetivos</h3>
+            <p>
+              Chino para todas las edades y nivelaes. Sea cuál sea tu
+              objetivo, en Aprender Chino Hoy te ayudamos a alcanzarlo.
+            </p>
           </div>
         </div>
-      </section>
 
-      <section class="banner paralax full-width">
-      </section>
-    </main>
+        <div class="card">
+          <svg class="icon">
+            <use xlink:href="#svg-idea"></use>
+          </svg>
+          <div class="text">
+            <h3>Método propio que funciona</h3>
+            <p>
+              Método propio basado en conversaciones impartido por profesores
+              de diferentes nacionalidades.
+            </p>
+          </div>
+        </div>
 
-    <footer>
-      <section class="contact regular-width">
-        <h2>Contacto</h2>
-        <form action="">
-          <label>
-            Nombre
-            <input type="text" name="name" id="name" placeholder="Example" />
-          </label>
+        <div class="card">
+          <svg class="icon">
+            <use xlink:href="#svg-scholl"></use>
+          </svg>
+          <div class="text">
+            <h3>#Aprender-Chino-Hoy-Experience</h3>
+            <p>
+              Academia de chino donde no tendrás la sesnación de estar en una
+              clase. ¡Una experiencia mas allá de las aulas!
+            </p>
+          </div>
+        </div>
 
-          <label>
-            Dirección de e-mail
-            <input
-              type="email"
-              name="email"
-              id="email"
-              placeholder="sample@gmail.com"
-            />
-          </label>
+        <div class="card">
+          <svg class="icon">
+            <use xlink:href="#svg-teacher"></use>
+          </svg>
+          <div class="text">
+            <h3>Profesorado Nativo</h3>
+            <p>
+              Profesores cualificados de diversas partes del mundo, en
+              continua formación y entrenamiento.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-          <label>
-            Teléfono (opcional)
-            <input
-              type="tel"
-              name="tel"
-              id="tel"
-              placeholder="+34 123 45 67 89"
-            />
-          </label>
+    <section class="banner paralax full-width">
+    </section>
+  </main>
 
-          <label>
-            Tipo de alumno
-            <select name="alumno" id="alumno">
-              <option value="Adulto">Adulto</option>
-              <option value="Niño">Niño</option>
-            </select>
-          </label>
+  <footer>
+    <section class="contact regular-width">
+      <h2>Contacto</h2>
+      <form action="">
+        <label>
+          Nombre
+          <input type="text" name="name" id="name" placeholder="Example" />
+        </label>
 
-          <label>
-            Tipo de curso
-            <select name="curso" id="curso">
-              <option value="">---</option>
-              <option value="Intensivo Verano">Intensivo Verano</option>
-              <option value="Intensivo Verano online">
-                Intensivo Verano online
-              </option>
-              <option value="Iniciación al Chino - HSK1 (mañanas)">
-                Iniciación al Chino - HSK1 (mañanas)
-              </option>
-              <option value="Iniciación al Chino - HSK1 (tardes)">
-                Iniciación al Chino - HSK1 (tardes)
-              </option>
-              <option value="Iniciación al Chino - HSK1 (online)">
-                Iniciación al Chino - HSK1 (online)
-              </option>
-              <option value="Chino Básico - HSK2 (mañanas)">
-                Chino Básico - HSK2 (mañanas)
-              </option>
-              <option value="Chino Básico - HSK2 (tardes)">
-                Chino Básico - HSK2 (tardes)
-              </option>
-              <option value="Chino Básico - HSK2 (online)">
-                Chino Básico - HSK2 (online)
-              </option>
-              <option value="Chino pre-Intermedio - HSK3 (mañanas)">
-                Chino pre-Intermedio - HSK3 (mañanas)
-              </option>
-              <option value="Chino pre-Intermedio - HSK3 (tardes)">
-                Chino pre-Intermedio - HSK3 (tardes)
-              </option>
-              <option value="Chino pre-Intermedio - HSK3 (online)">
-                Chino pre-Intermedio - HSK3 (online)
-              </option>
-              <option value="Chino Intermedio - HSK4">
-                Chino Intermedio - HSK4
-              </option>
-              <option value="Chino Intermedio avanzado - HSK5">
-                Chino Intermedio avanzado - HSK5
-              </option>
-              <option value="Chino oral intermedio">
-                Chino oral intermedio
-              </option>
-              <option value="Chino oral pre-avanzado">
-                Chino oral pre-avanzado
-              </option>
-              <option value="Chino oral avanzado">Chino oral avanzado</option>
-              <option value="Otro">Otro</option>
-            </select>
-          </label>
+        <label>
+          Dirección de e-mail
+          <input type="email" name="email" id="email" placeholder="sample@gmail.com" />
+        </label>
 
-          <label>
-            Comentarios
-            <textarea name="comentarios" id="comentarios"></textarea>
-          </label>
+        <label>
+          Teléfono (opcional)
+          <input type="tel" name="tel" id="tel" placeholder="+34 123 45 67 89" />
+        </label>
 
-          <input type="submit" value="Enviar" class="btn cta">
-        </form>
-      </section>
+        <label>
+          Tipo de alumno
+          <select name="alumno" id="alumno">
+            <option value="Adulto">Adulto</option>
+            <option value="Niño">Niño</option>
+          </select>
+        </label>
 
-      <section class="bottom">
+        <label>
+          Tipo de curso
+          <select name="curso" id="curso">
+            <option value="">---</option>
+            <option value="Intensivo Verano">Intensivo Verano</option>
+            <option value="Intensivo Verano online">
+              Intensivo Verano online
+            </option>
+            <option value="Iniciación al Chino - HSK1 (mañanas)">
+              Iniciación al Chino - HSK1 (mañanas)
+            </option>
+            <option value="Iniciación al Chino - HSK1 (tardes)">
+              Iniciación al Chino - HSK1 (tardes)
+            </option>
+            <option value="Iniciación al Chino - HSK1 (online)">
+              Iniciación al Chino - HSK1 (online)
+            </option>
+            <option value="Chino Básico - HSK2 (mañanas)">
+              Chino Básico - HSK2 (mañanas)
+            </option>
+            <option value="Chino Básico - HSK2 (tardes)">
+              Chino Básico - HSK2 (tardes)
+            </option>
+            <option value="Chino Básico - HSK2 (online)">
+              Chino Básico - HSK2 (online)
+            </option>
+            <option value="Chino pre-Intermedio - HSK3 (mañanas)">
+              Chino pre-Intermedio - HSK3 (mañanas)
+            </option>
+            <option value="Chino pre-Intermedio - HSK3 (tardes)">
+              Chino pre-Intermedio - HSK3 (tardes)
+            </option>
+            <option value="Chino pre-Intermedio - HSK3 (online)">
+              Chino pre-Intermedio - HSK3 (online)
+            </option>
+            <option value="Chino Intermedio - HSK4">
+              Chino Intermedio - HSK4
+            </option>
+            <option value="Chino Intermedio avanzado - HSK5">
+              Chino Intermedio avanzado - HSK5
+            </option>
+            <option value="Chino oral intermedio">
+              Chino oral intermedio
+            </option>
+            <option value="Chino oral pre-avanzado">
+              Chino oral pre-avanzado
+            </option>
+            <option value="Chino oral avanzado">Chino oral avanzado</option>
+            <option value="Otro">Otro</option>
+          </select>
+        </label>
 
-      </section>
-    </footer>
+        <label>
+          Comentarios
+          <textarea name="comentarios" id="comentarios"></textarea>
+        </label>
 
-    <!-- Aos imports -->
-    <!-- <script type="text/javascript" src="code/aos.js"></script> -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
-  </body>
+        <input type="submit" value="Enviar" class="btn cta">
+      </form>
+    </section>
+
+    <section class="bottom">
+      <div class="wrapper-widgets regular-width">
+
+        <div class="widgets">
+          <div class="widget menu">
+            <h3>Menu</h3>
+            <ul>
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#">Curso</a></li>
+              <li><a href="#">Contacto</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </div>
+  
+          <div class="widget address">
+            <h3>Ubicación</h3>
+            <address>
+              <p>c/ Radas 51, 08004 Barcelona, Spain</p>
+              <a href="tel:+34930082321">(+34) 93 008 23 21</a>
+            </address>
+          </div>
+  
+          <div class="widget socials">
+            <h3>Redes sociales</h3>
+            <a href="#">
+              <svg>
+                <use xlink:href="#svg-whatsapp-2"></use>
+              </svg>
+            </a>
+  
+            <a href="#">
+              <svg>
+                <use xlink:href="#svg-facebook"></use>
+              </svg>
+            </a>
+  
+            <a href="#">
+              <svg>
+                <use xlink:href="#svg-instagram"></use>
+              </svg>
+            </a>
+  
+            <a href="#">
+              <svg>
+                <use xlink:href="#svg-twitter"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <small>
+        © Aprender Chino Hoy | Powered by <a href="http://www.darideveloper.com/">Dari Developer</a>
+      </small>
+    </section>
+  </footer>
+
+  <!-- Aos imports -->
+  <!-- <script type="text/javascript" src="code/aos.js"></script> -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+
 </html>
