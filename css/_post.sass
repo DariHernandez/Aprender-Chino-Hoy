@@ -1,0 +1,48 @@
+section.post
+
+
+    .hero.paralax
+        display: flex
+        align-items: center
+        justify-content: center
+
+    .content
+        margin: 50px auto
+
+        img
+            width: 100%
+            height: auto
+
+        h1, h2, h3, h4, h5, h6
+            margin: 0
+            padding: 0
+            margin-top: 30px
+            margin-bottom: 10px
+
+        .layout
+            display: grid
+            align-items: flex-start
+            justify-content: center
+            gap: 20px
+
+
+            &.grid-2
+                grid-template-columns: repeat(2, 1fr)
+            
+            &.grid-3
+                grid-template-columns: repeat(3, 1fr)
+
+            &.grid-4
+                grid-template-columns: repeat(4, 1fr)
+
+    .color-a
+        color: $color-a
+
+    .color-b
+        color: $color-b
+
+    .color-c
+        color: $color-c
+
+    .color-d
+        color: $color-d 

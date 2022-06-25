@@ -315,6 +315,52 @@ section.blog .wrapper-blogs .best-posts section article img {
   height: auto;
 }
 
+section.post .hero.paralax {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+section.post .content {
+  margin: 50px auto;
+}
+section.post .content img {
+  width: 100%;
+  height: auto;
+}
+section.post .content h1, section.post .content h2, section.post .content h3, section.post .content h4, section.post .content h5, section.post .content h6 {
+  margin: 0;
+  padding: 0;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+section.post .content .layout {
+  display: grid;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20px;
+}
+section.post .content .layout.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+section.post .content .layout.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+section.post .content .layout.grid-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+section.post .color-a {
+  color: #7C3E66;
+}
+section.post .color-b {
+  color: #243A73;
+}
+section.post .color-c {
+  color: #A5BECC;
+}
+section.post .color-d {
+  color: #F2EBE9;
+}
+
 footer {
   background-color: #A5BECC;
 }
