@@ -30,12 +30,6 @@ const all_posts = [
         title: "Sample post 5",
         date: sample_date,
         image: "temp.jpg"
-    },
-    {
-        id: 6,
-        title: "Sample post 6",
-        date: sample_date,
-        image: "temp.jpg"
     }
 ]
 
@@ -49,12 +43,6 @@ const best_posts = [
     {
         id: 2,
         title: "Sample post 3",
-        date: sample_date,
-        image: "temp.jpg"
-    },
-    {
-        id: 2,
-        title: "Sample post 6",
         date: sample_date,
         image: "temp.jpg"
     }

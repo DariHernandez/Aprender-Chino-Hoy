@@ -12,19 +12,25 @@ async function show_posts () {
     // Show posts data
     const posts_lists = ["all-posts", "best-posts"]
     for (const posts_list of posts_lists) {
+        // Ge6t posts wrapper
+        const posts_wrapper = document.querySelector (`.${posts_list} section`)
+
         for (const [index, post_data] of posts[posts_list].entries() ) {
-    
-            // Get post elements
-            const current_post = document.querySelector (`.${posts_list} section article:nth-child(${index+1})`)
-            let current_post_title = current_post.querySelector ("h3")
-            let current_post_img = current_post.querySelector ("img")
-            let current_post_date = current_post.querySelector ("time")
-    
-            // Update posts data
-            current_post_title.innerHTML = post_data["title"]
-            current_post_img.setAttribute ("src", `../imgs/${post_data["image"]}` )
-            current_post_date.innerHTML = String(post_data["date"].join("/"))
-            current_post_date.setAttribute("datetime", post_data["date"].join("/"))
+
+            // Create post
+            let post = `
+            <article>
+                <a href="./${post_data["title"].toLowerCase().replace(" ", "-")}.html">
+                    <img src="../imgs/${post_data["image"]}" alt="blog ${post_data["title"]} preview image">
+                    <h3>${post_data["title"]}</h3>
+                    <p class="datetime">
+                        <i class="icon-clock2"></i>
+                        <time datetime="${post_data["date"].join("-")}">${post_data["date"].join("/")}</time>
+                    </p>
+                </a>
+            </article>`
+            posts_wrapper.innerHTML += post
+
         }
     }
 }
