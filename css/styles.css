@@ -232,9 +232,13 @@ section.about-us .cards .card .text {
   width: calc(100% - 180px);
 }
 
-section.socials {
+section.banner {
   background-image: url("../imgs/banner.png");
   margin-top: 50px;
+}
+
+.sk_branding {
+  display: none !important;
 }
 
 section.blog {
