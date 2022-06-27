@@ -232,9 +232,8 @@ section.about-us .cards .card .text {
   width: calc(100% - 180px);
 }
 
-section.banner {
-  background-image: url("../imgs/banner.jpg");
-  opacity: 0.6;
+section.socials {
+  background-image: url("../imgs/banner.png");
   margin-top: 50px;
 }
 
