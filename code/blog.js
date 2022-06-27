@@ -20,7 +20,7 @@ async function show_posts () {
             // Create post
             let post = `
             <article>
-                <a href="./${post_data["title"].toLowerCase().replace(" ", "-")}.html">
+                <a href="./${post_data["title"].toLowerCase().replaceAll(" ", "-")}.html">
                     <img src="../imgs/${post_data["image"]}" alt="blog ${post_data["title"]} preview image">
                     <h3>${post_data["title"]}</h3>
                     <p class="datetime">

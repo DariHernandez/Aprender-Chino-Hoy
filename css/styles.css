@@ -364,6 +364,9 @@ footer {
   background-color: #A5BECC;
 }
 
+footer section.contact {
+  margin-top: 50px;
+}
 footer section.contact form {
   width: 100%;
   margin: 0 auto;
