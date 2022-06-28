@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="./css/styles.css" />
   <link rel="icon" type="image/x-icon" href="./imgs/favicon.png" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -54,17 +54,37 @@
       <path
         d="M16 24h-6v-1c0-1.105.895-2 2-2h2c.53 0 1.039.211 1.414.586s.586.884.586 1.414v1zm8 0h-6v-1c0-1.105.895-2 2-2h2c.53 0 1.039.211 1.414.586s.586.884.586 1.414v1zm-17.241-15c.649 0 1.293-.213 1.692-.436.755-.42 2.695-1.643 3.485-2.124.216-.131.495-.083.654.113l.008.011c.165.204.146.499-.043.68-.622.597-2.443 2.328-3.37 3.213-.522.499-.822 1.183-.853 1.904-.095 2.207-.261 6.912-.331 8.833-.017.45-.387.806-.837.806h-.001c-.444 0-.786-.347-.836-.788-.111-.981-.329-3.28-.426-4.212-.04-.384-.28-.613-.585-.615-.304-.001-.523.226-.549.609-.061.921-.265 3.248-.341 4.22-.034.442-.397.786-.84.786h-.001c-.452 0-.824-.357-.842-.808-.097-2.342-.369-8.964-.369-8.964l-1.287 2.33c-.14.253-.445.364-.715.26h-.001c-.279-.108-.43-.411-.349-.698l1.244-4.393c.122-.43.515-.727.962-.727h4.531zm6.241 7c1.242 0 2.25 1.008 2.25 2.25s-1.008 2.25-2.25 2.25-2.25-1.008-2.25-2.25 1.008-2.25 2.25-2.25zm8 0c1.242 0 2.25 1.008 2.25 2.25s-1.008 2.25-2.25 2.25-2.25-1.008-2.25-2.25 1.008-2.25 2.25-2.25zm3-1h-15v-1h8v-1h3v1h3v-13h-22v7l-1 2.745v-10.745h24v15zm-6-6h-4v-1h4v1zm-12.626-5c1.241 0 2.25 1.008 2.25 2.25s-1.009 2.25-2.25 2.25c-1.242 0-2.25-1.008-2.25-2.25s1.008-2.25 2.25-2.25zm15.626 3h-7v-1h7v1zm0-2h-7v-1h7v1z" />
     </symbol>
+    <symbol id="svg-close" class="svg_elem" viewBox="0 0 24 24">
+      <path d="m12 10.93 5.719-5.72c.146-.146.339-.219.531-.219.404 0 .75.324.75.749 0 .193-.073.385-.219.532l-5.72 5.719 5.719 5.719c.147.147.22.339.22.531 0 .427-.349.75-.75.75-.192 0-.385-.073-.531-.219l-5.719-5.719-5.719 5.719c-.146.146-.339.219-.531.219-.401 0-.75-.323-.75-.75 0-.192.073-.384.22-.531l5.719-5.719-5.72-5.719c-.146-.147-.219-.339-.219-.532 0-.425.346-.749.75-.749.192 0 .385.073.531.219z"/>
+    </symbol>
+    <symbol id="svg-menu" class="svg_elem" viewBox="0 0 24 24">
+      <path d="m13 16.745c0-.414-.336-.75-.75-.75h-9.5c-.414 0-.75.336-.75.75s.336.75.75.75h9.5c.414 0 .75-.336.75-.75zm9-5c0-.414-.336-.75-.75-.75h-18.5c-.414 0-.75.336-.75.75s.336.75.75.75h18.5c.414 0 .75-.336.75-.75zm-4-5c0-.414-.336-.75-.75-.75h-14.5c-.414 0-.75.336-.75.75s.336.75.75.75h14.5c.414 0 .75-.336.75-.75z" fill-rule="nonzero"/>
+    </symbol>
   </svg>
 
   <header class="regular-width" id="header">
-    <a class="top" href=".">
-      <img src="./imgs/logo.png" alt="Logo of company Aprender Chino Hoy" class="logo" />
-      <h2>Aprender Chino Hoy</h2>
-    </a>
-    <nav>
+    <div class="top">
+      <a class="logo-title" href=".">
+        <img src="./imgs/logo.png" alt="Logo of company Aprender Chino Hoy" class="logo" />
+        <h2>Aprender Chino Hoy</h2>
+      </a>
+      <button class="btn open">
+        <svg>
+          <use xlink:href="#svg-menu"></use>
+        </svg>
+      </button>
+    </div>
+    <nav class="collapsed">
       <ul>
+        <li class="close-wrapper">
+          <button class="btn close">
+            <svg>
+              <use xlink:href="#svg-close"></use>
+            </svg>
+          </button>
+        </li>
         <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">Curso</a></li>
+        <li><a href="./curso">Curso</a></li>
         <li><a href="#contact">Contacto</a></li>
         <li><a href="./blog">Blog</a></li>
       </ul>
@@ -75,7 +95,7 @@
     <img src="./imgs/whatsapp.png" alt="whatsapp logo">
   </a>
 
-  <main>
+  <main class="hide">
     <section class="hero full-width paralax">
       <div class="text">
         <h1>
@@ -85,7 +105,7 @@
         </h1>
         <hr />
         <h2>JULY | AUGUST | SEPTEMBER</h2>
-        <a href="#" class="btn cta">GO!</a>
+        <a href="./curso" class="btn cta">GO!</a>
       </div>
     </section>
 
@@ -167,7 +187,7 @@
   </main>
 
 
-  <footer>
+  <footer class="hide">
     <section class="contact regular-width" id="contact">
       <h2>Contacto</h2>
       <form action="">
@@ -318,6 +338,8 @@
   <script>
     AOS.init();
   </script>
+
+  <script src="./code/header.js"></script>
 </body>
 
 </html>

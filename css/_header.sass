@@ -1,9 +1,9 @@
 #header
 
-    // position: sticky
-    // top: 0
+    button 
+        display: none
 
-    .top
+    .logo-title
         display: flex
         align-items: center
         justify-content: center
@@ -53,3 +53,75 @@
 
                 &:hover:not(.active)
                     color: rgba($color-b, 0.8)
+
+    @media screen and (max-width: 670px)
+        button 
+            display: inline-block
+            background: none
+            border: none
+
+            &:hover
+                opacity: 0.5
+
+            svg
+                width: 40px
+                height: 40px
+
+        button.close
+            margin-left: 45px
+            margin-top: 25px
+
+            svg
+                fill: $color-b
+
+        button.open
+            svg
+                fill: $color-a
+
+        .top
+            width: calc(100% - 40px)
+            margin: 0 auto
+            display: flex
+            align-items: center
+            justify-content: space-around
+
+            .logo-title 
+                width: auto
+                margin: 0
+
+                h2
+                    display: none
+                .logo
+                    margin: 0
+
+        nav
+            position: fixed
+            top: 0
+            right: 0
+            height: 100vh
+            background-color: $color-c
+            transition-duration: 0.5s
+
+            &.collapsed
+                right: -210px
+
+            ul
+                margin: 0
+                padding: 0
+                flex-direction: column
+
+                li
+                    // border-bottom: 1px solid $color-b
+                    width: 100%
+
+                    a, a:last-child
+                        border: none
+                        padding-top: 25px
+                        color: $color-b
+                        font-size: 22px
+                        width: 100%
+                        display: inline-block
+
+    @media screen and (max-width: 450px)
+        .top
+            justify-content: space-between
