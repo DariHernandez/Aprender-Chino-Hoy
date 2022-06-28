@@ -201,6 +201,7 @@ h2 {
     height: 100vh;
     background-color: #A5BECC;
     transition-duration: 0.5s;
+    z-index: 2;
   }
   #header nav.collapsed {
     right: -210px;
