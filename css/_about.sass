@@ -5,6 +5,9 @@ section.about-us
         span
             text-decoration: underline
 
+        br
+            display: none
+
     > p
         text-align: center
         margin-top: 10px
@@ -31,3 +34,27 @@ section.about-us
 
             .text
                 width: calc(100% - 180px)
+
+    @media screen and (max-width: 800px)
+        .cards
+            grid-template-columns: repeat(1, 1fr)
+            width: 70%
+    
+    @media screen and (max-width: 670px)
+        h2 br.first
+            display: block
+
+        .cards
+            width: 100%
+
+    @media screen and (max-width: 500px)
+        h2 br.second
+            display: block
+
+    @media screen and (max-width: 450px)
+        .cards .card
+            flex-direction: column
+            text-align: center
+
+            .text
+                width: 100%
