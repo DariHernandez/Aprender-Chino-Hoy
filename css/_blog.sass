@@ -34,13 +34,13 @@ section.blog
         display: flex
         align-items: center
         justify-content: center
+        margin-top: 30px
 
     
     .wrapper-blogs
         display: flex
         align-items: flex-start
         justify-content: space-between
-        width: 100%
         margin: 50px auto
 
 
@@ -78,3 +78,42 @@ section.blog
                     img
                         width: 100%
                         height: auto
+                    
+    @media screen and (max-width: 900px)
+        .wrapper-blogs
+            .all-posts
+                width: 65%
+
+                section
+                    grid-template-columns: repeat(1, 1fr)
+
+            .best-posts
+                width: 30%
+
+    @media screen and (max-width: 650px)
+        .wrapper-blogs
+            flex-direction: column
+
+            .all-posts
+                width: 100%
+                order: 2
+
+            .best-posts
+                width: 100%
+                order: 1
+                margin-bottom: 50px
+
+                section
+                    flex-direction: row
+                    gap: 10px
+
+    @media screen and (max-width: 530px)
+        .wrapper-blogs
+        
+            .best-posts
+                width: 70%
+                margin-right: auto
+                margin-left: auto
+
+                section
+                    flex-direction: column

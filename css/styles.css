@@ -411,12 +411,12 @@ section.blog .hero.paralax {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 30px;
 }
 section.blog .wrapper-blogs {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  width: 100%;
   margin: 50px auto;
 }
 section.blog .wrapper-blogs .all-posts {
@@ -450,6 +450,45 @@ section.blog .wrapper-blogs .best-posts section article {
 section.blog .wrapper-blogs .best-posts section article img {
   width: 100%;
   height: auto;
+}
+@media screen and (max-width: 900px) {
+  section.blog .wrapper-blogs .all-posts {
+    width: 65%;
+  }
+  section.blog .wrapper-blogs .all-posts section {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  section.blog .wrapper-blogs .best-posts {
+    width: 30%;
+  }
+}
+@media screen and (max-width: 650px) {
+  section.blog .wrapper-blogs {
+    flex-direction: column;
+  }
+  section.blog .wrapper-blogs .all-posts {
+    width: 100%;
+    order: 2;
+  }
+  section.blog .wrapper-blogs .best-posts {
+    width: 100%;
+    order: 1;
+    margin-bottom: 50px;
+  }
+  section.blog .wrapper-blogs .best-posts section {
+    flex-direction: row;
+    gap: 10px;
+  }
+}
+@media screen and (max-width: 530px) {
+  section.blog .wrapper-blogs .best-posts {
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  section.blog .wrapper-blogs .best-posts section {
+    flex-direction: column;
+  }
 }
 
 section.post .hero.paralax {

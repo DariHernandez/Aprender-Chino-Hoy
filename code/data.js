@@ -45,6 +45,12 @@ const best_posts = [
         title: "Sample post 3",
         date: sample_date,
         image: "temp.jpg"
+    },
+    {
+        id: 5,
+        title: "Sample post 5",
+        date: sample_date,
+        image: "temp.jpg"
     }
 ]
 
