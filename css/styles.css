@@ -81,6 +81,10 @@ h2 {
   height: 600px;
 }
 
+main {
+  margin-top: 30px;
+}
+
 @media screen and (max-width: 1000px) {
   .regular-width {
     width: calc(100% - 40px);
@@ -290,7 +294,6 @@ section.hero .btn {
 }
 @media screen and (max-width: 670px) {
   section.hero {
-    margin-top: 20px;
     height: 600px;
   }
   section.hero h1 {
@@ -411,7 +414,6 @@ section.blog .hero.paralax {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 30px;
 }
 section.blog .wrapper-blogs {
   display: flex;
