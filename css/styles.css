@@ -548,22 +548,22 @@ section.post .color-d {
   color: #F2EBE9;
 }
 
-.couses-wrapper h2 {
+.cursos-wrapper h2 {
   padding-top: 0;
 }
-.couses-wrapper section.couses {
+.cursos-wrapper section.cursos {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr;
   margin-top: 30px;
   gap: 40px;
 }
-.couses-wrapper section.couses article {
+.cursos-wrapper section.cursos article {
   position: relative;
   padding-bottom: 60px;
   text-align: center;
 }
-.couses-wrapper section.couses article .cta {
+.cursos-wrapper section.cursos article .cta {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -571,42 +571,42 @@ section.post .color-d {
   margin: 0 auto;
   width: 45%;
 }
-.couses-wrapper section.couses article p span {
+.cursos-wrapper section.cursos article p span {
   display: block;
   margin-bottom: 10px;
 }
-.couses-wrapper section.couses article p span:first-child {
+.cursos-wrapper section.cursos article p span:first-child {
   font-weight: bold;
 }
-.couses-wrapper section.couses article p span.price, .couses-wrapper section.couses article p span.last-price {
+.cursos-wrapper section.cursos article p span.price, .cursos-wrapper section.cursos article p span.last-price {
   font-style: italic;
 }
-.couses-wrapper section.couses article p span.price i.quantity, .couses-wrapper section.couses article p span.last-price i.quantity {
+.cursos-wrapper section.cursos article p span.price i.quantity, .cursos-wrapper section.cursos article p span.last-price i.quantity {
   font-weight: bold;
 }
-.couses-wrapper section.couses article p span.price {
+.cursos-wrapper section.cursos article p span.price {
   font-size: 20px;
 }
-.couses-wrapper section.couses article p span.last-price {
+.cursos-wrapper section.cursos article p span.last-price {
   position: relative;
   text-decoration: line-through;
   text-decoration-color: red;
   text-decoration-thickness: 2px;
 }
-.couses-wrapper section.couses h3 span {
+.cursos-wrapper section.cursos h3 span {
   display: block;
   margin-bottom: 10px;
 }
-.couses-wrapper section.couses h3 span:first-child {
+.cursos-wrapper section.cursos h3 span:first-child {
   font-size: 28px;
 }
 @media screen and (max-width: 670px) {
-  .couses-wrapper section.couses {
+  .cursos-wrapper section.cursos {
     display: grid;
     grid-template-columns: 1fr;
     gap: 0;
   }
-  .couses-wrapper section.couses article {
+  .cursos-wrapper section.cursos article {
     margin-bottom: 40px;
   }
 }

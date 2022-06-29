@@ -58,12 +58,26 @@
   </svg>
 
   <header class="regular-width" id="header">
-    <a class="top" href=".">
-      <img src="../imgs/logo.png" alt="Logo of company Aprender Chino Hoy" class="logo" />
-      <h2>Aprender Chino Hoy</h2>
-    </a>
-    <nav>
+    <div class="top">
+      <a class="logo-title" href="..">
+        <img src="../imgs/logo.png" alt="Logo of company Aprender Chino Hoy" class="logo" />
+        <h2>Aprender Chino Hoy</h2>
+      </a>
+      <button class="btn open">
+        <svg>
+          <use xlink:href="#svg-menu"></use>
+        </svg>
+      </button>
+    </div>
+    <nav class="collapsed">
       <ul>
+        <li class="close-wrapper">
+          <button class="btn close">
+            <svg>
+              <use xlink:href="#svg-close"></use>
+            </svg>
+          </button>
+        </li>
         <li><a href="..">Home</a></li>
         <li><a href="../cursos">Curso</a></li>
         <li><a href="#contact-form">Contacto</a></li>
@@ -156,50 +170,27 @@
           Tipo de curso
           <select name="curso" id="curso">
             <option value="">---</option>
-            <option value="Intensivo Verano">Intensivo Verano</option>
-            <option value="Intensivo Verano online">
-              Intensivo Verano online
+            <option value="Curso semi Intensivo online">
+              Curso semi Intensivo online
             </option>
-            <option value="Iniciación al Chino - HSK1 (mañanas)">
-              Iniciación al Chino - HSK1 (mañanas)
+            <option value="Curso super intensivo online">
+              Curso super intensivo online
             </option>
-            <option value="Iniciación al Chino - HSK1 (tardes)">
-              Iniciación al Chino - HSK1 (tardes)
+            <option value="Curso preparación examen HSK 1-6">
+              Curso preparación examen HSK 1-6
             </option>
-            <option value="Iniciación al Chino - HSK1 (online)">
-              Iniciación al Chino - HSK1 (online)
+            <option value="Curso oral examen HSK 1-6">
+              Curso oral examen HSK 1-6
             </option>
-            <option value="Chino Básico - HSK2 (mañanas)">
-              Chino Básico - HSK2 (mañanas)
+            <option value="Curso regular octubre a junio 2h">
+              Curso regular octubre a junio 2h
             </option>
-            <option value="Chino Básico - HSK2 (tardes)">
-              Chino Básico - HSK2 (tardes)
+            <option value="Curso regular octubre a junio 4h">
+              Curso regular octubre a junio 4h
             </option>
-            <option value="Chino Básico - HSK2 (online)">
-              Chino Básico - HSK2 (online)
+            <option value="Curso personalizado">
+              Curso personalizado
             </option>
-            <option value="Chino pre-Intermedio - HSK3 (mañanas)">
-              Chino pre-Intermedio - HSK3 (mañanas)
-            </option>
-            <option value="Chino pre-Intermedio - HSK3 (tardes)">
-              Chino pre-Intermedio - HSK3 (tardes)
-            </option>
-            <option value="Chino pre-Intermedio - HSK3 (online)">
-              Chino pre-Intermedio - HSK3 (online)
-            </option>
-            <option value="Chino Intermedio - HSK4">
-              Chino Intermedio - HSK4
-            </option>
-            <option value="Chino Intermedio avanzado - HSK5">
-              Chino Intermedio avanzado - HSK5
-            </option>
-            <option value="Chino oral intermedio">
-              Chino oral intermedio
-            </option>
-            <option value="Chino oral pre-avanzado">
-              Chino oral pre-avanzado
-            </option>
-            <option value="Chino oral avanzado">Chino oral avanzado</option>
             <option value="Otro">Otro</option>
           </select>
         </label>
@@ -277,6 +268,7 @@
     AOS.init();
   </script>
 
+  <script src="../code/header.js"></script>
   <script src="../code/post.js"></script>
 </body>
 
