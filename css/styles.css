@@ -99,12 +99,21 @@ main {
 .btn {
   display: inline-block;
 }
+.btn h2 {
+  padding-top: 0;
+}
 .btn.cta {
   font-size: 20px;
   background-color: #7C3E66;
+  border: 2px solid #7C3E66;
   color: #F2EBE9;
   padding: 10px 40px;
   border-radius: 30px;
+  transition-duration: 0.5s;
+}
+.btn.cta:hover {
+  background-color: rgba(124, 62, 102, 0);
+  color: #7C3E66;
 }
 
 #header button {
@@ -537,6 +546,47 @@ section.post .color-c {
 }
 section.post .color-d {
   color: #F2EBE9;
+}
+
+.couses-wrapper h2 {
+  padding-top: 0;
+}
+.couses-wrapper section.couses {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  margin-top: 30px;
+  gap: 40px;
+}
+.couses-wrapper section.couses article {
+  position: relative;
+  padding-bottom: 60px;
+}
+.couses-wrapper section.couses article .cta {
+  position: absolute;
+  bottom: 0;
+}
+.couses-wrapper section.couses article p span {
+  display: block;
+  margin-bottom: 10px;
+}
+.couses-wrapper section.couses article p span:first-child {
+  font-weight: bold;
+}
+.couses-wrapper section.couses article p span.price, .couses-wrapper section.couses article p span.last-price {
+  font-style: italic;
+}
+.couses-wrapper section.couses article p span.price i.quantity, .couses-wrapper section.couses article p span.last-price i.quantity {
+  font-weight: bold;
+}
+.couses-wrapper section.couses article p span.price {
+  font-size: 20px;
+}
+.couses-wrapper section.couses article p span.last-price {
+  position: relative;
+  text-decoration: line-through;
+  text-decoration-color: red;
+  text-decoration-thickness: 2px;
 }
 
 footer {

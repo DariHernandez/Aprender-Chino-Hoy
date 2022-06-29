@@ -1,0 +1,41 @@
+.couses-wrapper
+    h2
+        padding-top: 0
+
+    section.couses
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        grid-template-rows: 1fr
+        margin-top: 30px
+        gap: 40px
+
+        article
+            position: relative
+            padding-bottom: 60px
+
+            .cta
+                position: absolute
+                bottom: 0
+
+            p
+                span
+                    display: block
+                    margin-bottom: 10px
+
+                    &:first-child
+                        font-weight: bold
+
+                    &.price, &.last-price
+                        font-style: italic
+
+                        i.quantity
+                            font-weight: bold
+
+                    &.price
+                        font-size: 20px
+
+                    &.last-price
+                        position: relative
+                        text-decoration: line-through
+                        text-decoration-color: red
+                        text-decoration-thickness: 2px
