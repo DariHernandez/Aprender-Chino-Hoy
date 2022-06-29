@@ -12,11 +12,15 @@
         article
             position: relative
             padding-bottom: 60px
+            text-align: center
 
             .cta
                 position: absolute
                 bottom: 0
-
+                left: 0
+                right: 0
+                margin: 0 auto
+                width: 45%
             p
                 span
                     display: block
@@ -39,3 +43,20 @@
                         text-decoration: line-through
                         text-decoration-color: red
                         text-decoration-thickness: 2px
+
+        h3
+            span
+                display: block
+                margin-bottom: 10px
+
+                &:first-child
+                    font-size: 28px
+
+    @media screen and (max-width: 670px)
+        section.couses
+            display: grid
+            grid-template-columns: 1fr
+            gap: 0
+
+            article 
+                margin-bottom: 40px
