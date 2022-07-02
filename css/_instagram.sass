@@ -1,0 +1,79 @@
+section.instagram
+    background-color: white
+
+    h2
+        padding: 50px 0
+
+    .content
+        .profile
+            display: flex
+            align-items: center
+            justify-content: space-evenly
+            margin-bottom: 50px
+
+            .profile-img
+                width: 150px
+                height: 150px
+                border-radius: 50%
+
+            .info
+
+                .name-wrapper
+                    display: flex
+                    align-items: center
+                    justify-content: flex-start
+
+                    h3
+                        font-size: 28px
+                        font-weight: regular
+                        margin: 0
+                        margin-right: 30px
+                    
+                    .btn.follow
+                        border: 1px solid grey
+                        border-radius: 4px
+                        padding: 5px 10px
+
+
+                .counters
+                    display: flex
+                    align-items: center
+                    justify-content: flex-start
+
+                    p
+                        margin-right: 20px
+                        margin-bottom: 10px
+
+                        span
+                            font-weight: bold
+
+                > p, a
+                    margin: 5px 0
+                    font-size: 16px
+
+                    &.name
+                        font-weight: bold    
+
+                    &.category
+                        opacity: 0.7
+
+                    &.web-page
+                        color: $color-a
+        .posts
+            display: grid
+            grid-template-columns: repeat(3, 1fr)
+            gap: 30px
+            padding-bottom: 50px
+
+            article
+                width: 100%
+                height: auto
+                cursor: pointer
+
+                img
+                    width: 100%
+                    height: auto
+
+
+
+               

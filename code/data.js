@@ -56,37 +56,40 @@ const best_posts = [
 
 
 const instagram = {
-    user: "@darideveloper",
+    profile_photo: "https://www.darideveloper.com/imgs/logo.png",
+    profile_name: "darideveloper",
+    name: "francisco dari hernandez",
     num_post: 8,
     num_followers: 23,
     num_following: 31,
-    name: "francisco dari hernandez",
+    category: "Software",
     details: "Desarrollador frontend, desarrollador wordpress y experto en web scraping.",
-    web_page: "https://www.darideveloper.com/",
-    profile: "https://www.instagram.com/darideveloper/",
+    web_page_text: "www.darideveloper.com",
+    web_page_link: "www.darideveloper.com",
+    profile_url: "https://www.instagram.com/darideveloper/",
     posts: [
         {
-            image: "https://instagram.fagu3-1.fna.fbcdn.net/v/t51.2885-15/290190071_401005515311104_4786524893217113210_n.webp?stp=dst-jpg_e35_s320x320&cb=2d435ae8-4f3c5d8f&_nc_ht=instagram.fagu3-1.fna.fbcdn.net&_nc_cat=104&_nc_ohc=hmzh7w6rSM8AX_jXWMx&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT90pu9dACroR_jdVy9RaHfyD01rXhKqmkOipw5oPcf8GQ&oe=62C59479&_nc_sid=8fd12b",
+            image: "https://i.imgur.com/hCla2Dz.png",
             url: "https://www.instagram.com/p/CfUkBDnpKuj/"
         },
         {
-            image: "https://instagram.fagu3-1.fna.fbcdn.net/v/t51.2885-15/290190071_401005515311104_4786524893217113210_n.webp?stp=dst-jpg_e35_s320x320&cb=2d435ae8-4f3c5d8f&_nc_ht=instagram.fagu3-1.fna.fbcdn.net&_nc_cat=104&_nc_ohc=hmzh7w6rSM8AX_jXWMx&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT90pu9dACroR_jdVy9RaHfyD01rXhKqmkOipw5oPcf8GQ&oe=62C59479&_nc_sid=8fd12b",
+            image: "https://i.imgur.com/hCla2Dz.png",
             url: "https://www.instagram.com/p/CfUkBDnpKuj/"
         },
         {
-            image: "https://instagram.fagu3-1.fna.fbcdn.net/v/t51.2885-15/290190071_401005515311104_4786524893217113210_n.webp?stp=dst-jpg_e35_s320x320&cb=2d435ae8-4f3c5d8f&_nc_ht=instagram.fagu3-1.fna.fbcdn.net&_nc_cat=104&_nc_ohc=hmzh7w6rSM8AX_jXWMx&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT90pu9dACroR_jdVy9RaHfyD01rXhKqmkOipw5oPcf8GQ&oe=62C59479&_nc_sid=8fd12b",
+            image: "https://i.imgur.com/hCla2Dz.png",
             url: "https://www.instagram.com/p/CfUkBDnpKuj/"
         },
         {
-            image: "https://instagram.fagu3-1.fna.fbcdn.net/v/t51.2885-15/290190071_401005515311104_4786524893217113210_n.webp?stp=dst-jpg_e35_s320x320&cb=2d435ae8-4f3c5d8f&_nc_ht=instagram.fagu3-1.fna.fbcdn.net&_nc_cat=104&_nc_ohc=hmzh7w6rSM8AX_jXWMx&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT90pu9dACroR_jdVy9RaHfyD01rXhKqmkOipw5oPcf8GQ&oe=62C59479&_nc_sid=8fd12b",
+            image: "https://i.imgur.com/hCla2Dz.png",
             url: "https://www.instagram.com/p/CfUkBDnpKuj/"
         },
         {
-            image: "https://instagram.fagu3-1.fna.fbcdn.net/v/t51.2885-15/290190071_401005515311104_4786524893217113210_n.webp?stp=dst-jpg_e35_s320x320&cb=2d435ae8-4f3c5d8f&_nc_ht=instagram.fagu3-1.fna.fbcdn.net&_nc_cat=104&_nc_ohc=hmzh7w6rSM8AX_jXWMx&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT90pu9dACroR_jdVy9RaHfyD01rXhKqmkOipw5oPcf8GQ&oe=62C59479&_nc_sid=8fd12b",
+            image: "https://i.imgur.com/hCla2Dz.png",
             url: "https://www.instagram.com/p/CfUkBDnpKuj/"
         },
         {
-            image: "https://instagram.fagu3-1.fna.fbcdn.net/v/t51.2885-15/290190071_401005515311104_4786524893217113210_n.webp?stp=dst-jpg_e35_s320x320&cb=2d435ae8-4f3c5d8f&_nc_ht=instagram.fagu3-1.fna.fbcdn.net&_nc_cat=104&_nc_ohc=hmzh7w6rSM8AX_jXWMx&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT90pu9dACroR_jdVy9RaHfyD01rXhKqmkOipw5oPcf8GQ&oe=62C59479&_nc_sid=8fd12b",
+            image: "https://i.imgur.com/hCla2Dz.png",
             url: "https://www.instagram.com/p/CfUkBDnpKuj/"
         },
     ],
@@ -105,9 +108,9 @@ export async function get_posts () {
     }
 }
 
-export async function get_social_posts () {
+export async function get_instagram () {
     sleep (1)
-    return social_posts
+    return instagram
 }
 
 
