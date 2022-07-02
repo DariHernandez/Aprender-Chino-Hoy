@@ -38,7 +38,6 @@ window.onload = async function () {
     post_section.innerHTML = ""
 
     for (const post_data of instagram_data["posts"]) {
-        console.log (post_data)
         const post_image = post_data["image"]
         const post_url = post_data["url"]
         
@@ -47,11 +46,19 @@ window.onload = async function () {
                         <img src="${post_image}" alt="post image">
                     </article>`
         
-        console.log (post)
-
-        post_section.innerHTML += post 
-
+        post_section.innerHTML += post         
     }
 
+    open_posts ()
+}
 
+function open_posts () {
+    // Add event listener for open posts in new tabs
+    let posts = document.querySelectorAll ("section.posts article")
+    for (const post of posts) {
+        post.addEventListener ("click", function (event) {
+            let link = this.getAttribute ("post-link")
+            window.open(link, '_blank')
+        })
+    }
 }
