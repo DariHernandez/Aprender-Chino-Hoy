@@ -24,7 +24,7 @@ window.onload = async function () {
 
     profile_img.setAttribute ("src", instagram_data["profile_photo"])
     profile_name.innerHTML = instagram_data["profile_name"]
-    profile_follow.setAttribute ("href", instagram_data["profile_url"])
+    profile_follow.setAttribute ("href", instagram_data["profile_link"])
     num_posts.innerHTML = instagram_data["num_posts"]
     num_followers.innerHTML = instagram_data["num_followers"]
     num_following.innerHTML = instagram_data["num_following"]
