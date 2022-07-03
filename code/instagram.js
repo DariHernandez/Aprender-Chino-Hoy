@@ -7,7 +7,6 @@ window.onload = async function () {
 
     // Get data from api
     const instagram_data = await get_instagram ()
-    console.log (instagram_data)
 
     // Update content
     const profile = instagram_wrapper.querySelector (".profile")
