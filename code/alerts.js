@@ -1,5 +1,3 @@
-window.onload = () => show_alert()
-
 function show_alert () {
     const queryString = window.location.search
     const urlParams = new URLSearchParams(queryString)
@@ -13,3 +11,5 @@ function show_alert () {
         window.location.href = "#header"
     }
 }
+
+show_alert ()
