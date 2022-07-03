@@ -111,7 +111,7 @@ export async function get_posts () {
 export async function get_instagram () {
     return fetch ("https://raw.githubusercontent.com/DariHernandez/instagram-last-posts-github-api/master/data.json")
     .then (reponse => reponse.json())
-    .then (json_data => json_data["darideveloper"])
+    .then (json_data => json_data["aprenderchinohoy"])
 }
 
 

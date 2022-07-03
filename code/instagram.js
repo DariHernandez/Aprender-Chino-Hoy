@@ -28,10 +28,25 @@ window.onload = async function () {
     num_followers.innerHTML = instagram_data["num_followers"]
     num_following.innerHTML = instagram_data["num_following"]
     name.innerHTML = instagram_data["name"]
-    category.innerHTML = instagram_data["category"]
-    details.innerHTML = instagram_data["details"]
-    web_page.innerHTML = instagram_data["web_page_text"]
-    web_page.setAttribute ("href", instagram_data["web_page_link"])
+
+    if (instagram_data["category"]) {
+        category.innerHTML = instagram_data["category"]
+    } else {
+        category.classList.add ("hide")
+    }
+
+    if (instagram_data["details"]) {
+        details.innerHTML = instagram_data["details"]
+    } else {
+        details.classList.add ("hide")
+    }
+
+    if (instagram_data["web_page_text"]) {
+        web_page.innerHTML = instagram_data["web_page_text"]
+        web_page.setAttribute ("href", instagram_data["web_page_link"])
+    } else {
+        web_page.classList.add ("hide")
+    }
 
     // Update posts
     let post_section = instagram_wrapper.querySelector (".posts")
