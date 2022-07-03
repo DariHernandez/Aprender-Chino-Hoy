@@ -203,15 +203,15 @@
   <footer>
     <section class="contact regular-width" id="contact-form">
       <h2>Contacto</h2>
-      <form action="">
+      <form action="https://darideveloper.pythonanywhere.com/contactforms-api/" method="post">
         <label>
           Nombre
-          <input type="text" name="name" id="name" placeholder="Example" />
+          <input type="text" name="name" id="name" placeholder="Example" required/>
         </label>
 
         <label>
           Dirección de e-mail
-          <input type="email" name="email" id="email" placeholder="sample@gmail.com" />
+          <input type="email" name="email" id="email" placeholder="sample@gmail.com" required/>
         </label>
 
         <label>
@@ -221,7 +221,7 @@
 
         <label>
           Tipo de alumno
-          <select name="alumno" id="alumno">
+          <select name="alumno" id="alumno" required>
             <option value="Adulto">Adulto</option>
             <option value="Niño">Niño</option>
           </select>
@@ -229,7 +229,7 @@
 
         <label>
           Tipo de curso
-          <select name="curso" id="curso">
+          <select name="curso" id="curso" required>
             <option value="">---</option>
             <option value="Curso semi Intensivo online">
               Curso semi Intensivo online
@@ -262,6 +262,11 @@
         </label>
 
         <input type="submit" value="Enviar" class="btn cta">
+
+        <input type="hidden" name="subject" id="subject" ,="" value="Nuevo contacto en un curso">
+        <input type="hidden" name="user" id="user" value="aprender_chino_hoy">
+        <input type="hidden" name="api_key" id="api_key" value="hhcj8khkbdl2fn4243fveb0n5kcne7il">
+        <input type="hidden" name="redirect" id="redirect" value="https://darihernandez.github.io/Aprender-Chino-Hoy/?thanks=true">
       </form>
     </section>
 
@@ -317,6 +322,7 @@
     AOS.init();
   </script>
 
+  <script src="./code/alerts.js"></script>
   <script src="./code/header.js"></script>
   <script src="./code/instagram.js" type="module"></script>
 
