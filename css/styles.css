@@ -768,6 +768,10 @@ footer section.contact form input[type=submit] {
   margin: 0 auto;
   margin-top: 30px;
 }
+footer section.contact form label.privacity input {
+  display: inline-block;
+  width: auto;
+}
 @media screen and (max-width: 500px) {
   footer section.contact form input[type=submit] {
     width: 60%;
